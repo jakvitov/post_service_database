@@ -12,4 +12,7 @@ ALTER TABLE ps_post_comment ADD CONSTRAINT fk_ps_post FOREIGN KEY (post_id) REFE
 
 ALTER TABLE ps_topic ADD user_id int;
 ALTER TABLE ps_topic ADD CONSTRAINT fk_ps_user FOREIGN KEY (user_id) REFERENCES ps_user(user_id);
+
+ALTER TABLE ps_post_comment ADD user_id int;
+ALTER TABLE ps_post_comment ADD CONSTRAINT fk_ps_user FOREIGN KEY (user_id) REFERENCES ps_user(user_id);
 commit;
